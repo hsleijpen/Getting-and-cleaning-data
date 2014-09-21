@@ -1,0 +1,20 @@
+Getting and Cleaning Data: Course Project
+
+Introduction
+This repository contains my work in creating an R-script, called run_ananlysis.R, for the course project for the Coursera course "Getting and Cleaning data", part of the Data Science specialization of Johns Hopkins Bloomberg School of Public Health. 
+In this document I describe in short how the script run_analysis.R works. While doing so I will first comment on the original data, then on the actual R-script and I will conclude with a short remark on the (revised) Code Book for the (merged) dataset.
+
+The original data
+The original data consist of a set of test data and a set of training data. Each set consists of datafeatures file, an activitylabel file and a subject file.
+As for the test data: the datafeatures (in total 561) are unlabeled and can be found in the x_test.txt. The activity labels are in the y_test.txt file. The test subjects are in the subject_test.txt file.
+As for the training data: the datafeatures (in total 561) are unlabeled and can be found in the x_train.txt. The activity labels are in the y_train.txt file. The test subjects are in the subject_train.txt file.
+
+The script and the tidy dataset
+An R-script called run_analysis.R was created which merges the test and training sets. Prerequisites for running this script are: 1) the UCI HAR Dataset must be extracted and 2) the UCI HAR Dataset must be available in a directory called "UCI HAR Dataset".
+
+The R-script then merges the above mentioned test data and training data, labels are added to the relevant data, columns for new variables are added and only columns that have to do with mean and standard deviation are kept in the merged dataset.
+
+Lastly, the script will create a tidy data set containing the means of all the columns per test subject and per activity. This tidy dataset will be written to a tab-delimited file called tidy.txt, which can also be found in this repository.
+
+The Code Book
+The CodeBook.md file explains the transformations performed and the resulting data and variables.
